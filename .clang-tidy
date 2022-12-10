@@ -1,0 +1,26 @@
+---
+Checks: |
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  *,
+  -fuchsia-*,
+  -llvm-header-guard,
+  -llvmlibc-*,
+  -cppcoreguidelines-owning-memory,
+  -google-runtime-references,
+  -modernize-use-trailing-return-type,
+  -cert-err58-cpp,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -hicpp-no-array-decay,
+  -altera-struct-pack-align,
+  -bugprone-exception-escape
+WarningsAsErrors: true
+AnalyzeTemporaryDtors: false
+FormatStyle:     file
+CheckOptions:
+  - key:   cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors
+    value: '1'
+...
